@@ -8,7 +8,7 @@ public class Student {
     public Student(String id, String name) {
         this.id = id;
         this.name = name;
-        score = 0;
+        this.score = 0;
     }
 
     public Student(String id, String name, double score) {
@@ -29,21 +29,16 @@ public class Student {
         }
     }
 
-    public String grade()
-    {
+    public String grade() {
         if (score > 80) {
             return "A";
-        }
-        else if (score > 70) {
+        } else if (score > 70) {
             return "B";
-        }
-        else if (score > 60) {
+        } else if (score > 60) {
             return "C";
-        }
-        else if (score > 50) {
+        } else if (score > 50) {
             return "D";
-        }
-        else {
+        } else {
             return "F";
         }
     }
@@ -71,5 +66,15 @@ public class Student {
                 ", name: '" + name + '\'' +
                 ", score: " + score +
                 '}';
+    }
+
+    public Object getUsername() {
+        return name;
+    }
+
+    public void setPassword(String newPassword) {
+        if (newPassword != null) {
+            this.name = newPassword;
+        }
     }
 }
